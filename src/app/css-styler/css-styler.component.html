@@ -1,0 +1,27 @@
+<pre>
+    backgroundColor: 
+    <input 
+        #backgroundColor 
+        type="color" 
+        [value]="cssStyle.backgroundColor" 
+        (change)="update({backgroundColor: backgroundColor.value})"/>
+    borderColor: 
+    <input
+        #borderColor
+        type="color" 
+        [value]="cssStyle.borderColor"
+        (change)="update({borderColor: borderColor.value})"/>
+    borderRadius: 
+    <input
+        #borderRadius 
+        type="number" 
+        [value]="cssStyle.borderRadius.replace('px', '').replace('%', '')"
+        (change)="update({borderRadius: buildRadius(borderRadius.value, unit.value)})"/>
+    <select 
+        #unit
+        [value]="cssStyle.borderRadius.replace('[0-9]', '')"
+        (change)="update({borderRadius: buildRadius(borderRadius.value, unit.value)})">
+        <option value="px">px</option>
+        <option value="%">%</option>
+    </select>
+</pre>

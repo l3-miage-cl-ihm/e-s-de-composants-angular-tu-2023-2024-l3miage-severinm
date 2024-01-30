@@ -1,1 +1,9 @@
 <h1>TP Entrées et sorties de composants</h1>
+
+<pre>
+    {{style() | json}}
+</pre>
+
+<div class="stylée" [style]="style()"></div>
+
+<app-css-styler [cssStyle]="style()" (cssStyleChange)="setStyle($event)"></app-css-styler>
