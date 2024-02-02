@@ -1,0 +1,6 @@
+<div class="color"></div>
+<div class="inputs">
+    <input #r type="range" min="0" max="255" [value]="hexToDecimal(color[1] + color[2])" (change)="updateColor({r: r.value, g: g.value, b: b.value})"/>
+    <input #g type="range" min="0" max="255" [value]="hexToDecimal(color[3] + color[4])" (change)="updateColor({r: r.value, g: g.value, b: b.value})"/>
+    <input #b type="range" min="0" max="255" [value]="hexToDecimal(color[5] + color[6])" (change)="updateColor({r: r.value, g: g.value, b: b.value})"/>
+</div>
